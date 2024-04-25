@@ -1,4 +1,4 @@
-import { Slide, Fade, Zoom } from 'react-slideshow-image';
+import { Fade } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
 import './Slideshow.css'
 
@@ -35,7 +35,6 @@ const spanStyle = {
 }
 
 const Slideshow = (props) => {
-    const images = props;
     return (
         <div className="slide-container">
             <Fade>
