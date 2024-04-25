@@ -1,8 +1,8 @@
 const Footer = () => {
     return (
-        <header className="App-footer">
+        <footer className="App-footer">
             {/*<img src={logo} className="App-logo" alt="logo" */}
-        </header>
+        </footer>
     );
 };
 

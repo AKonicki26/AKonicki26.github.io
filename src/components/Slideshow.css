@@ -1,5 +1,7 @@
 .slide-container {
-    width: 66%;
-    border-radius: 25px;
+    width: 55%;
+    border-radius: 1em;
+    margin: 5% 25px 25px;
+    overflow: hidden;
 }
 
