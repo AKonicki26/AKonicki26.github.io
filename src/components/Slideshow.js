@@ -1,24 +1,6 @@
 import { Slide, Fade, Zoom } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
-
-const spanStyle = {
-    padding: '20px',
-    background: '#efefef',
-    color: '#000000',
-    display: 'flex',
-    width: ' 100%',
-}
-
-const divStyle = {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundSize: 'cover',
-    width: '100%',
-    height: '400px',
-    'flex-direction': 'column',
-    'justify-content': 'space-between'
-}
+import './Slideshow.css'
 
 const slideImages = [
     {
@@ -35,6 +17,23 @@ const slideImages = [
     },
 ];
 
+const divStyle  = {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundSize: 'cover',
+    height: '400px',
+}
+
+const spanStyle = {
+    padding: '20px',
+    background: '#343942',
+    color: '#ffffff',
+    display: 'flex',
+    width: '100%',
+
+}
+
 const Slideshow = (props) => {
     const images = props;
     return (
@@ -42,9 +41,10 @@ const Slideshow = (props) => {
             <Fade>
                 {slideImages.map((slideImage, index) => (
                     <div className={index}>
-                        <div style={{ ...divStyle, 'backgroundImage': `url(${slideImage.url})` }}>
-                            <span style={spanStyle}>{slideImage.caption}</span>
+                        <div style={{...divStyle, 'backgroundImage': `url(${slideImage.url})`}}>
+
                         </div>
+                        <span style={spanStyle}>{slideImage.caption}</span>
                     </div>
                 ))}
             </Fade>
