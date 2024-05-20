@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e224f352-f241-4d6a-901a-35b7e4494153" name="Changes" comment="Round corners of slideshow, change color of backing page">
-      <change afterPath="$PROJECT_DIR$/src/images/Github Logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/linkedin.svg" afterDir="false" />
+    <list default="true" id="e224f352-f241-4d6a-901a-35b7e4494153" name="Changes" comment="Most of header done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Slideshow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Slideshow.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +119,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714085087534</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Most of header done">
+      <option name="closed" value="true" />
+      <created>1714089493498</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1714089493498</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,6 +149,7 @@
     <MESSAGE value="Remove old deploy" />
     <MESSAGE value="Finish deployment setup" />
     <MESSAGE value="Round corners of slideshow, change color of backing page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Round corners of slideshow, change color of backing page" />
+    <MESSAGE value="Most of header done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Most of header done" />
   </component>
 </project>

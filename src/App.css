@@ -21,6 +21,8 @@ html {
   background-color: #1d2026;
   min-height: 8vh;
   align-items: center;
+  display: flex;
+  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }

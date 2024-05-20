@@ -7,7 +7,6 @@ const headerLogo = {
     display: 'flex',
     'flex-direction': 'row',
     float: 'left',
-    border: '2px solid black'
 }
 
 const pageNavigaton = {
@@ -17,8 +16,8 @@ const pageNavigaton = {
     'justify-content': 'center',
     'font-size': 'calc(10px + 2vmin)',
     'color': 'white',
+    width: '100%',
     overflow: 'hidden',
-    border: '2px solid red',
 }
 
 const linkContainer = {
@@ -27,7 +26,8 @@ const linkContainer = {
     'justify-content': 'right',
     'font-size': 'calc(1px + 2vmin)',
     float: 'right',
-    border: '2px solid black'
+    'margin-right': '2vh',
+    'margin-left': '2vh'
 }
 
 const linkButtonStyle = {
@@ -35,7 +35,8 @@ const linkButtonStyle = {
     'flex-direction': 'column',
     'align-items': 'center',
     'justify-content': 'center',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    margin: '5px',
 }
 
 const headerImage = {
@@ -61,7 +62,7 @@ const links = [
 const linkButton = (imageSource) => {
     return (
         <div style={linkButtonStyle} onClick={() => openInNewTab(imageSource.link)}>
-            <svg style={headerImage} src={imageSource.image} alt={`${imageSource.name} link`}/>
+            <img style={headerImage} src={imageSource.image} alt={`${imageSource.name} link`}/>
             <div>{imageSource.name}</div>
         </div>
     );
@@ -70,7 +71,7 @@ const linkButton = (imageSource) => {
 const Header = () => {
 
     return (
-        <header className="App-header" style={{'border': '2px solid white'}}>
+        <header className="App-header">
             <div style={headerLogo}>
                 <img
                     style={{
