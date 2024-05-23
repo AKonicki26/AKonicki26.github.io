@@ -4,8 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+    <list default="true" id="e224f352-f241-4d6a-901a-35b7e4494153" name="Changes" comment="Put slideshow on main page, add space for headers and footers">
+      <change afterPath="$PROJECT_DIR$/src/ccaCardBuilder/CardBuilder.js" afterDir="false" />
     <list default="true" id="e224f352-f241-4d6a-901a-35b7e4494153" name="Changes" comment="Most of header done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Header.js" afterDir="false" />
     </list>
@@ -53,7 +61,6 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Users\\thecr\\AppData\\Local\\JetBrains\\IntelliJ IDEA 2023.3.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -62,7 +69,6 @@
       <recent name="C:\Code\AKonicki26.github.io\src\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Code\AKonicki26.github.io\src\images" />
       <recent name="D:\Code\AKonicki26.github.io\src" />
       <recent name="C:\Code\AKonicki26.github.io\src" />
       <recent name="C:\Code\AKonicki26.github.io\public" />
@@ -111,23 +117,7 @@
       <option name="project" value="LOCAL" />
       <updated>1714054558963</updated>
     </task>
-    <task id="LOCAL-00005" summary="Round corners of slideshow, change color of backing page">
-      <option name="closed" value="true" />
-      <created>1714085087534</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1714085087534</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Most of header done">
-      <option name="closed" value="true" />
-      <created>1714089493498</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1714089493498</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,8 +138,6 @@
     <MESSAGE value="Revert bad commits" />
     <MESSAGE value="Remove old deploy" />
     <MESSAGE value="Finish deployment setup" />
-    <MESSAGE value="Round corners of slideshow, change color of backing page" />
-    <MESSAGE value="Most of header done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Most of header done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish deployment setup" />
   </component>
 </project>

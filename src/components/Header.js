@@ -1,6 +1,7 @@
-import githubPfp from './images/GithubPfp.jpg'
-import githubLogo from './images/Github Logo.png'
-import linkedinLogo from './images/linkedin.svg'
+import githubPfp from './../images/GithubPfp.jpg'
+import githubLogo from './../images/Github Logo.png'
+import linkedinLogo from './../images/linkedin.svg'
+import { Link } from 'react-router-dom'
 
 const headerLogo = {
     'align-items': 'center',
@@ -47,7 +48,21 @@ const openInNewTab = (url) => {
     window.open(url, "_blank", "noreferrer");
 };
 
-const links = [
+const pageLinks = [
+
+    {
+        name: "Home",
+        image: "",
+        link: "/"
+    },
+    {
+        name: "Card Builder",
+        image: "",
+        link: "/cardbuilder"
+    }
+]
+
+const mediaLinks = [
     {
         name: 'github',
         image: githubLogo,
@@ -68,6 +83,14 @@ const linkButton = (imageSource) => {
     );
 }
 
+const routeLink = (routerDestination) => {
+    return (
+        <div style={linkButtonStyle} onClick={() => console.log(`Navigating to ${routerDestination}`)}>
+            <Link to={routerDestination.link}>{routerDestination.name}</Link>
+        </div>
+    );
+}
+
 const Header = () => {
 
     return (
@@ -81,9 +104,9 @@ const Header = () => {
                     src={githubPfp} alt="um..."/>
                 <p>AKonicki26.github.io</p>
             </div>
-            <div style={pageNavigaton}>Imagine there are things here</div>
+            <div style={pageNavigaton}>{pageLinks.map(link => routeLink(link))}</div>
             <div style={linkContainer}>
-                {links.map(linkObj => linkButton(linkObj))}
+                {mediaLinks.map(linkObj => linkButton(linkObj))}
             </div>
         </header>
     );
