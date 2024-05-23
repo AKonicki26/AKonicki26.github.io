@@ -1,8 +1,7 @@
 import React, {useState} from 'react'
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import SearchableDropdown from "../components/SearchableDropdown";
-import { Dropdown, DropdownButton, ButtonGroup } from "react-bootstrap";
+import { Dropdown } from "react-bootstrap";
 import CardCanvas from "./CardCanvas";
 
 const cardInfoInput = {
@@ -26,9 +25,8 @@ const CardBuilder = () => {
     const [division, setDivision] = useState(null);
     const [borderType, setBorderType] = useState(null);
     const [playerImage, setPlayerImage] = useState();
+    const [logoImage, setLogoImage] = useState();
     const divisionCount = 6;
-    const cardWidth = 150;
-    const cardHeight = 300;
 
     return (
         <div className="main-content">
@@ -74,10 +72,15 @@ const CardBuilder = () => {
                         ))}
                     </Dropdown.Menu>
                 </Dropdown>
-                <input type="file" onChange={img => setPlayerImage(URL.createObjectURL(img.target.files[0]))}/>
+                <label htmlFor='playerImage'>Player Image: </label>
+                    <input type="file" name='playerImage' onChange={img => setPlayerImage(URL.createObjectURL(img.target.files[0]))}/>
+
+                <label htmlFor='teamLogo'>Logo Image: </label>
+                    <input type="file" name='teamLogo' onChange={img => setLogoImage(URL.createObjectURL(img.target.files[0]))}/>
+
             </div>
             <div className={cardInfoDisplay}>
-                <CardCanvas division={division} image={playerImage} name={playerName} borderType={borderType}/>
+                <CardCanvas division={division} image={playerImage} name={playerName} borderType={borderType} teamLogo={logoImage}/>
             </div>
         </div>
     )
