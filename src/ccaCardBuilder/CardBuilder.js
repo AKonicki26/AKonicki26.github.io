@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import SearchableDropdown from "../components/SearchableDropdown";
 import { Dropdown, DropdownButton, ButtonGroup } from "react-bootstrap";
+import CardCanvas from "./CardCanvas";
 
 const cardInfoInput = {
 
@@ -12,11 +13,12 @@ const cardInfoDisplay = {
 
 }
 
-const borderTypes = Object.freeze({
-    BRONZE: Symbol("bronze"),
-    SILVER: Symbol("silver"),
-    GOLD: Symbol("gold"),
-    RAINBOW: Symbol("rainbow"),
+export const borderTypes = Object.freeze({
+    BRONZE: "Bronze",
+    SILVER: "Silver",
+    GOLD: "Gold",
+    RAINBOW: "Rainbow",
+    PINK: "Pink"
 });
 
 const CardBuilder = () => {
@@ -67,7 +69,7 @@ const CardBuilder = () => {
 
                         {Object.keys(borderTypes).map((border, index) => (
                             <Dropdown.Item eventKey={`${index + 1}`} onClick={() => {
-                                setBorderType(border[0].toUpperCase() + border.slice(1).toLowerCase())
+                                setBorderType(borderTypes[border])
                             }}>{border[0].toUpperCase() + border.slice(1).toLowerCase()}</Dropdown.Item>
                         ))}
                     </Dropdown.Menu>
@@ -75,11 +77,7 @@ const CardBuilder = () => {
                 <input type="file" onChange={img => setPlayerImage(URL.createObjectURL(img.target.files[0]))}/>
             </div>
             <div className={cardInfoDisplay}>
-                <div>Player Name: {playerName}</div>
-                <div>Player Division: {division}</div>
-                <div>Border Type: {borderType}</div>
-
-                <img src={playerImage} alt="Player Image" style={{width: cardWidth, height: cardHeight, 'object-fit': 'cover'}}/>
+                <CardCanvas division={division} image={playerImage} name={playerName} borderType={borderType}/>
             </div>
         </div>
     )
