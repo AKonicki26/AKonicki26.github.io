@@ -23,7 +23,7 @@ const CardBuilder = () => {
     const [playerName, setPlayerName] = useState("Player");
     const [division, setDivision] = useState(null);
     const [borderType, setBorderType] = useState(null);
-    const [playerImage, setPlayerImage] = useState(null);
+    const [playerImage, setPlayerImage] = useState();
     const divisionCount = 6;
     const cardWidth = 150;
     const cardHeight = 300;
@@ -72,14 +72,14 @@ const CardBuilder = () => {
                         ))}
                     </Dropdown.Menu>
                 </Dropdown>
-                <input type="file" onChange={(img) => URL.createObjectURL(img.target.files[0])}/>
+                <input type="file" onChange={img => setPlayerImage(URL.createObjectURL(img.target.files[0]))}/>
             </div>
             <div className={cardInfoDisplay}>
                 <div>Player Name: {playerName}</div>
                 <div>Player Division: {division}</div>
                 <div>Border Type: {borderType}</div>
 
-                <img src={playerImage} alt="Player Image" width={cardWidth} height={cardHeight}/>
+                <img src={playerImage} alt="Player Image" style={{width: cardWidth, height: cardHeight, 'object-fit': 'cover'}}/>
             </div>
         </div>
     )
