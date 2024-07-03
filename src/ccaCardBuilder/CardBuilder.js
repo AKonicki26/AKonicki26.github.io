@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Dropdown } from "react-bootstrap";
 import CardCanvas from "./CardCanvas";
+import Slider from "@mui/material/Slider"
 
 const cardInfoInput = {
 
@@ -26,6 +27,8 @@ const CardBuilder = () => {
     const [borderType, setBorderType] = useState(null);
     const [playerImage, setPlayerImage] = useState();
     const [logoImage, setLogoImage] = useState();
+    const [imageXPos, setImageXPos] = useState();
+    const [imageYPos, setImageYPos] = useState();
     const divisionCount = 6;
 
     return (
@@ -80,7 +83,12 @@ const CardBuilder = () => {
 
             </div>
             <div className={cardInfoDisplay}>
-                <CardCanvas division={division} image={playerImage} name={playerName} borderType={borderType} teamLogo={logoImage}/>
+                <CardCanvas division={division} image={playerImage} name={playerName} borderType={borderType}
+                            teamLogo={logoImage} sliderPosition={imageXPos}/>
+                <div>
+                    Image x Position
+                    <Slider defaultValue={50} onChange={e => setImageXPos(e.target.value) }/>
+                </div>
             </div>
         </div>
     )
@@ -89,11 +97,10 @@ const CardBuilder = () => {
 const CardBuilderPage = () => {
     return (
         <div className="App">
-            <Header/>
+        <Header/>
             <CardBuilder/>
             <Footer/>
         </div>
-
     )
 }
 

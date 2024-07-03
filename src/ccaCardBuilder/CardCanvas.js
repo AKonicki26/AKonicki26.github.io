@@ -3,6 +3,15 @@ import PropTypes from "prop-types";
 import { borderTypes } from './CardBuilder'
 import triangleImage from './../Assets/Gradient Triangles.png';
 
+import bronzeBorder from './../Assets/BorderImages/BronzeBorder.png'
+import silverBorder from './../Assets/BorderImages/SilverBorder.png'
+import goldBorder from './../Assets/BorderImages/GoldBorder.png'
+import pinkBorder from './../Assets/BorderImages/PinkBorder.png'
+import rainbowBorder from './../Assets/BorderImages/RainbowBorder.png'
+
+import defaultImage from './../Assets/DefaultImage.jpg';
+
+
 const playerCard = {
     margin: '10px'
 }
@@ -33,7 +42,26 @@ const getBorderColor = (borderType) => {
     }
 }
 
-const CardCanvas = ({ name, division, image, borderType, teamLogo }) => {
+const getBorderImage = (borderType) => {
+    switch (true) {
+        case borderType === borderTypes.GOLD: return goldBorder;
+        case borderType === borderTypes.SILVER: return silverBorder;
+        case borderType === borderTypes.BRONZE: return bronzeBorder;
+        case borderType === borderTypes.PINK: return pinkBorder;
+        case borderType === borderTypes.RAINBOW: return rainbowBorder;
+        default: return pinkBorder;
+    }
+}
+
+const CardCanvas = ({ name, division, image, borderType, teamLogo, sliderPosition }) => {
+
+    // set default values
+    name = name === null ? "Player" : name;
+    division = division === null ? "Division ?" : division;
+    image = image === undefined ? defaultImage : image;
+    borderType = borderType === null ? borderTypes.PINK : borderType;
+    sliderPosition = sliderPosition === undefined ? 50 : sliderPosition;
+
     const canvasRef = React.useRef(null); // Ref to store the canvas element
 
     React.useEffect(() => {
@@ -56,8 +84,19 @@ const CardCanvas = ({ name, division, image, borderType, teamLogo }) => {
         // Draw image
         const playerImage = new Image();
         playerImage.onload = () => {
-            context.drawImage(playerImage, borderThickness, borderThickness,
-                canvas.width - (2 * borderThickness), canvas.height - ( 2 * borderThickness));
+
+            // get the scale
+            // it is the min of the 2 ratios
+            let scaleFactor = Math.max(canvas.width / playerImage.width, canvas.height / playerImage.height);
+
+            // Finding the new width and height based on the scale factor
+            let newWidth = playerImage.width * scaleFactor;
+            let newHeight = playerImage.height * scaleFactor;
+
+            let drawX = (canvas.width / 2) - (newWidth  * (sliderPosition / 100));
+            let drawY = (canvas.height / 2) - (newHeight / 2);
+
+            context.drawImage(playerImage, drawX + borderThickness, drawY + borderThickness, newWidth - (borderThickness * 2), newHeight - (borderThickness * 2));
 
             const foreground = new Image();
             foreground.onload = () => {
@@ -80,13 +119,16 @@ const CardCanvas = ({ name, division, image, borderType, teamLogo }) => {
                     logoSize, logoSize);
             }
             logoImage.src = teamLogo;
+
+            const borderImage = new Image();
+            borderImage.onload = () => {
+                context.drawImage(borderImage, 0, 0, canvas.width, canvas.height);
+            }
+            borderImage.src = getBorderImage(borderType);
         };
         playerImage.src = image;
 
-
-
-
-    }, [name, division, image, borderType, teamLogo]);
+    }, [name, division, image, borderType, teamLogo, sliderPosition]);
 
     return <canvas ref={canvasRef} width={cardWidth} height={cardHeight} style={playerCard}/>;
 };
