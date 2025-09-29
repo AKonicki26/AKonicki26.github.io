@@ -2,18 +2,22 @@ import { Fade } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
 import './Slideshow.css'
 
+import ProjectSlide from '../Assets/projectsslide.png'
+import LC from '../Assets/leahy.jpg'
+import Cards from '../Assets/cardsslide.png'
+
 const slideImages = [
     {
-        url: 'https://images.unsplash.com/photo-1509721434272-b79147e0e708?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
-        caption: 'Slide 1'
+        url: ProjectSlide,
+        caption: 'See some of my Projects!'
     },
     {
-        url: 'https://images.unsplash.com/photo-1506710507565-203b9f24669b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1536&q=80',
-        caption: 'Slide 2'
+        url: LC,
+        caption: 'See my Experience!'
     },
     {
-        url: 'https://images.unsplash.com/photo-1536987333706-fc9adfb10d91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
-        caption: 'Slide 3'
+        url: Cards,
+        caption: 'Build some Cards!'
     },
 ];
 

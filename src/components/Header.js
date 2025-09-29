@@ -59,10 +59,16 @@ const pageLinks = [
         name: "Card Builder",
         image: "",
         link: "/cardbuilder"
-    }, {
-    name: "Projects",
+    },
+    {
+        name: "Projects",
         image: "",
         link: "/projects"
+    },
+    {
+        name: "Resume",
+        image: "",
+        link: "/resume"
     }
 ]
 

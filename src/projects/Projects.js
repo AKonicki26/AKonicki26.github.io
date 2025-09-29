@@ -1,5 +1,7 @@
 import SplitSection from "../components/SplitSection/SplitSection";
 import CyanneCard from '../Assets/cyanne.png'
+import Chess from '../Assets/chess.png'
+import GeneticAlg from '../Assets/genetic-alg.png'
 import MyPic from "../Assets/azzy-pic.png";
 
 const ProjectsPage = () => {
@@ -21,7 +23,7 @@ const ProjectsPage = () => {
             <div style={{ height: "50px" }}></div>
 
             <SplitSection
-                imageSrc={MyPic}
+                imageSrc={GeneticAlg}
                 imageAlt="GeneticAlgorithm"
                 title="Genetic Algorithm"
                 text={<span>The genetic algorithm is an AI evolutionary algorithm that has generations of agents attempting to complete a task. The agents start with completely random inputs, then the best performers are selected and mutated slightly, hoping to have the mutations improve their performance. This cycle continues until a desired performance level is achieved.
@@ -34,7 +36,7 @@ In this simple test of the algorithm, the agents are trying to move from the lef
             <div style={{ height: "50px" }}></div>
 
             <SplitSection
-                imageSrc={MyPic}
+                imageSrc={Chess}
                 imageAlt="Chess"
                 title="Chess AI"
                 text={<span>This chess AI was built for an in-class competition for the Advanced AI for Games course. The goal was to take in a string representation of the board and return the best move possible. The AI used the MinMax algorithm to determine the best move.

@@ -1,0 +1,28 @@
+/* General container for SplitSections handles spacing */
+.resume-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Headings inside split sections */
+.split-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+/* SplitSection text formatting */
+.split-text p,
+.split-text strong,
+.split-text br {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Optional: spacing between SplitSections */
+.SplitSection + .SplitSection {
+    margin-top: 40px;
+}
