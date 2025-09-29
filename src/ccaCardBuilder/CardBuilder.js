@@ -96,10 +96,8 @@ const CardBuilder = () => {
 
 const CardBuilderPage = () => {
     return (
-        <div className="App">
-        <Header/>
-            <CardBuilder/>
-            <Footer/>
+        <div className="main-content">
+        <CardBuilder/>
         </div>
     )
 }

@@ -1,0 +1,39 @@
+.split-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 20px auto;   /* center horizontally */
+    max-width: 75%;      /* constrain width */
+}
+.split-section.flip {
+    flex-direction: row-reverse; /* flip image and text */
+}
+
+.split-image {
+    flex: 1; /* 1/3 width */
+}
+
+.split-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.split-text {
+    flex: 2; /* 2/3 width */
+}
+
+.split-text h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.split-text h2 {
+    margin-bottom: 10px;
+    font-size: 1.25rem; /* smaller than 1.5rem */
+}
+
+.split-text p {
+    font-size: 1.1rem; /* normal body size */
+    line-height: 1.5; /* better readability */
+}

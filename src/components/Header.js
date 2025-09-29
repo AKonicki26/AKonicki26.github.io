@@ -59,6 +59,10 @@ const pageLinks = [
         name: "Card Builder",
         image: "",
         link: "/cardbuilder"
+    }, {
+    name: "Projects",
+        image: "",
+        link: "/projects"
     }
 ]
 
@@ -70,7 +74,7 @@ const mediaLinks = [
     }, {
         name: 'linkedin',
         image: linkedinLogo,
-        link: 'https://www.linkedin.com/in/anne-konicki/'
+        link: 'https://www.linkedin.com/in/astrid-konicki/'
     }
 ]
 
@@ -102,7 +106,7 @@ const Header = () => {
                         'margin-right': '2vh'
                     }}
                     src={githubPfp} alt="um..."/>
-                <p>AKonicki26.github.io</p>
+                <p>Astrid Konicki</p>
             </div>
             <div style={pageNavigaton}>{pageLinks.map(link => routeLink(link))}</div>
             <div style={linkContainer}>

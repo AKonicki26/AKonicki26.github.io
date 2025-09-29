@@ -1,15 +1,32 @@
 import './App.css';
-import Homepage from "./Homepage";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from './components/Header'
 import Footer from "./components/Footer";
+import Homepage from "./Homepage";
+import CardBuilder from "./ccaCardBuilder/CardBuilder";
+import Projects from './projects/Projects'
+
+function Layout({ children }) {
+    return (
+        <div className="App">
+            <Header />
+            <main>{children}</main>
+            <Footer />
+        </div>
+    );
+}
 
 function App() {
     return (
-        <div className="App">
-            <Header></Header>
-            <Homepage></Homepage>
-            <Footer></Footer>
-        </div>
+        <Router>
+            <Layout>
+                <Routes>
+                    <Route path="/" element={<Homepage />} />
+                    <Route path="/cardbuilder" element={<CardBuilder />} />
+                    <Route path="/projects" element={<Projects/>} />
+                </Routes>
+            </Layout>
+        </Router>
     );
 }
 
