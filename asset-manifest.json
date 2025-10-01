@@ -1,22 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.53e80b16.css",
-    "main.js": "/static/js/main.b5df100a.js",
-    "static/js/453.5565870f.chunk.js": "/static/js/453.5565870f.chunk.js",
+    "main.css": "/static/css/main.a294eb3e.css",
+    "main.js": "/static/js/main.15ef3756.js",
+    "static/media/cyanne.png": "/static/media/cyanne.17ebc4751b09f5cc3325.png",
+    "static/media/champlain-sign.jpg": "/static/media/champlain-sign.94b56646ce93413e871e.jpg",
     "static/media/Splatfont2.ttf": "/static/media/Splatfont2.e7f22bec8edd01a50ccd.ttf",
+    "static/media/cardsslide.png": "/static/media/cardsslide.2a5342c8e7f975649ccd.png",
+    "static/media/leahy.jpg": "/static/media/leahy.174bec9219e1a212097e.jpg",
+    "static/media/azzy-pic.png": "/static/media/azzy-pic.8077663fe319aaedbc67.png",
     "static/media/Gradient Triangles.png": "/static/media/Gradient Triangles.83b4b05cf775e9e859e8.png",
+    "static/media/projectsslide.png": "/static/media/projectsslide.22afb8ab0f3d1d53e50a.png",
+    "static/media/csharp-code.png": "/static/media/csharp-code.2005fca804bff6ccafbd.png",
     "static/media/DefaultImage.jpg": "/static/media/DefaultImage.96f9bff99e6eb4faeeea.jpg",
+    "static/media/genetic-alg.png": "/static/media/genetic-alg.00ee602fbfe46c8e3709.png",
     "static/media/RainbowBorder.png": "/static/media/RainbowBorder.dd5e387937f6738ce65b.png",
     "static/media/GithubPfp.jpg": "/static/media/GithubPfp.fdc6da4a31562b3ff9f3.jpg",
+    "static/media/chess.png": "/static/media/chess.19d8534994b5143fbbb9.png",
     "static/media/Github Logo.png": "/static/media/Github Logo.f1bf4f745c50e24ea872.png",
     "static/media/linkedin.svg": "/static/media/linkedin.29c4bd550a1a9a398115bf7dc2a8a1e4.svg",
     "index.html": "/index.html",
-    "main.53e80b16.css.map": "/static/css/main.53e80b16.css.map",
-    "main.b5df100a.js.map": "/static/js/main.b5df100a.js.map",
-    "453.5565870f.chunk.js.map": "/static/js/453.5565870f.chunk.js.map"
+    "main.a294eb3e.css.map": "/static/css/main.a294eb3e.css.map",
+    "main.15ef3756.js.map": "/static/js/main.15ef3756.js.map"
   },
   "entrypoints": [
-    "static/css/main.53e80b16.css",
-    "static/js/main.b5df100a.js"
+    "static/css/main.a294eb3e.css",
+    "static/js/main.15ef3756.js"
   ]
 }
